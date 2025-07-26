@@ -1,0 +1,49 @@
+/* CSS variables */
+:root {
+    --primary-font: 'Open Sans', sans-serif;
+    --secondary-font: 'Epilogue', sans-serif;
+    --primary-color: #171E4B; /* dark blue */
+    --text-color: #2C2C2C; /* charcoal gray */
+    --highlight-color: #3F51B5; /* indigo */
+    --background-color: #E0E0E0; /* light gray */
+}
+
+/* Global styles */
+h1 {
+    font-family: var(--secondary-font);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+h4 {
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    line-height: 2rem;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+
