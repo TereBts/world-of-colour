@@ -2,22 +2,22 @@
 // Update colour palette preview
 // Interact with world map
 
-const angolaParts = ["AO-1", "AO-2"];
+document.addEventListener("DOMContentLoaded", () => {
 
-angolaParts.forEach(id => {
-  document.getElementById(id).addEventListener("click", () => {
-    alert("You clicked Angola!");
+  // Brazil
+  const brazil = ["BR"];
+
+  brazil.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener("click", () => {
+        alert("You clicked Brazil!");
+      });
+    } else {
+      console.warn("Brazil element not found:", id);
+    }
   });
 });
-
-const brazil = ["BR"];
-
-brazil.forEach(id => {
-    document.getElementById(id).addEventListener("click", () => {
-        alert("You clicked Brazil!");
-    });
-});
-
 
 // Show meaning on hover
 // Reset or clear selections
