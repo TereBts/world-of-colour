@@ -159,27 +159,29 @@ document.querySelectorAll("#colour-map svg path").forEach(el => {
 //allCountries.forEach(el => console.log(el.id));
 
 // Handle colour selection
-document.getElementById("colour-select").addEventListener("change", function (e) {
-  const selectedColour = e.target.value;
+document.getElementById("colour-select").addEventListener("change", function () {
+  const selectedColour = this.value;
 
-// Update colour palette preview
-// Remove existing highlight classes from all countries
-document.querySelectorAll("#colour-map .country").forEach(el => {
-    el.classList.remove("red-highlight", "green-highlight", "yellow-highlight", "blue-highlight");
-});
+  // Remove previous highlights
+  document.querySelectorAll("#colour-map .country").forEach((el) => {
+    el.classList.remove("country", "highlight-red", "highlight-green", "highlight-yellow", "highlight-blue");
+  });
 
-if (!selectedColour) return; // Do nothing if default option is selected
+  // Get the array of countries for the selected colour
+  const countriesForColour = countryData[selectedColour];
+  if (!countriesForColour) return;
 
-  // Apply highlight to the countries for the selected colour
-const colourGroup = countryData[selectedColour];
-if (colourGroup) {
-    Object.keys(colourGroup).forEach(countryId => {
-      const countryEl = document.getElementById(countryId);
-      if (countryEl) {
-        countryEl.classList.add(`${selectedColour}-highlight`);
+  // Loop through each country in the array
+  countriesForColour.forEach((countryObj) => {
+    countryObj.ids.forEach((id) => {
+      const svgElement = document.getElementById(id);
+      if (svgElement) {
+        svgElement.classList.add("country", `highlight-${selectedColour}`);
+      } else {
+        console.warn(`Element with ID "${id}" not found in the SVG`);
       }
     });
-  }
+  });
 });
 
 // Interact with world map
