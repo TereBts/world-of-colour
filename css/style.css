@@ -70,20 +70,21 @@ section {
 }
 
 /* Colour highlights */
-.red-highlight {
-  fill: #e74c3c;
+
+.highlight-red {
+  fill: red !important;
 }
 
-.green-highlight {
-  fill: #27ae60;
+.highlight-green {
+  fill: green !important;
 }
 
-.yellow-highlight {
-  fill: #f1c40f;
+.highlight-yellow {
+  fill: yellow !important;
 }
 
-.blue-highlight {
-  fill: #3498db;
+.highlight-blue {
+  fill: blue !important;
 }
 
 
