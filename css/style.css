@@ -63,7 +63,7 @@ section {
 }
 
 .country {
-  fill: #ccc; /* light grey */
+  fill: green; /* light grey */
   opacity: 0.5;
   transition: fill 0.4s ease, opacity 0.4s ease;
   cursor: default;

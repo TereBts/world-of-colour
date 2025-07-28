@@ -26,7 +26,7 @@ const countryData = {
     },
     {
       country: "Japan",
-      ids: ["JP-1", "JP-2", "JP-3"]
+      ids: ["JP-1", "JP-2", "JP-3"],
       meaning: "Life, passion, protection",
       context: "The red sun is central to the flag; red is protective in charms."
     },
@@ -152,6 +152,16 @@ const countryData = {
     }
   ]
 };
+
+//Add country .class to SVG elements
+document.querySelectorAll("#colour-map svg path").forEach(el => {
+  el.classList.add("country");
+});
+
+// Log total number of countries with class "country"
+const allCountries = document.querySelectorAll(".country");
+console.log("Total countries with class:", allCountries.length);
+allCountries.forEach(el => console.log(el.id));
 
 
 // Show meaning on hover
