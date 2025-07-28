@@ -63,25 +63,29 @@ section {
 }
 
 .country {
-  fill: green; /* light grey */
+  fill: #ccc; /* light grey */
   opacity: 0.5;
   transition: fill 0.4s ease, opacity 0.4s ease;
   cursor: default;
 }
 
 /* Colour highlights */
-.highlight-red {
-  fill: #e63946;
+.red-highlight {
+  fill: #e74c3c;
 }
-.highlight-green {
-  fill: #2a9d8f;
+
+.green-highlight {
+  fill: #27ae60;
 }
-.highlight-yellow {
-  fill: #e9c46a;
+
+.yellow-highlight {
+  fill: #f1c40f;
 }
-.highlight-blue {
-  fill: #457b9d;
+
+.blue-highlight {
+  fill: #3498db;
 }
+
 
 .country.active {
   opacity: 1;

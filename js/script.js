@@ -1,9 +1,4 @@
-// Handle colour selection
-// Update colour palette preview
-// Interact with world map
-
 // Country data
-
 const countryData = {
   red: [
     {
@@ -159,9 +154,36 @@ document.querySelectorAll("#colour-map svg path").forEach(el => {
 });
 
 // Log total number of countries with class "country"
-const allCountries = document.querySelectorAll(".country");
-console.log("Total countries with class:", allCountries.length);
-allCountries.forEach(el => console.log(el.id));
+//const allCountries = document.querySelectorAll(".country");
+//console.log("Total countries with class:", allCountries.length);
+//allCountries.forEach(el => console.log(el.id));
+
+// Handle colour selection
+document.getElementById("colour-select").addEventListener("change", function (e) {
+  const selectedColour = e.target.value;
+
+// Update colour palette preview
+// Remove existing highlight classes from all countries
+document.querySelectorAll("#colour-map .country").forEach(el => {
+    el.classList.remove("red-highlight", "green-highlight", "yellow-highlight", "blue-highlight");
+});
+
+if (!selectedColour) return; // Do nothing if default option is selected
+
+  // Apply highlight to the countries for the selected colour
+const colourGroup = countryData[selectedColour];
+if (colourGroup) {
+    Object.keys(colourGroup).forEach(countryId => {
+      const countryEl = document.getElementById(countryId);
+      if (countryEl) {
+        countryEl.classList.add(`${selectedColour}-highlight`);
+      }
+    });
+  }
+});
+
+// Interact with world map
+
 
 
 // Show meaning on hover
