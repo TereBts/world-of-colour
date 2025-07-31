@@ -5,7 +5,7 @@
     --primary-color: #171E4B; /* dark blue */
     --text-color: #2C2C2C; /* charcoal gray */
     --highlight-color: #3F51B5; /* indigo */
-    --background-color: #E0E0E0; /* light gray */
+    --background-color: #f0f0f0; /* light gray */
 }
 
 /* Global styles */
@@ -69,6 +69,19 @@ section {
   cursor: default;
 }
 
+/* SVG zoom buttons */
+
+.svg-pan-zoom .svg-pan-zoom_controls {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.svg-pan-zoom-control button {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
 /* Colour highlights */
 
 .highlight-red {
@@ -92,3 +105,4 @@ section {
   opacity: 1;
   cursor: pointer;
 }
+

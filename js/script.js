@@ -187,6 +187,25 @@ document.getElementById("colour-select").addEventListener("change", function () 
 // Interact with world map
 
 
+// Make world map responsive
+window.addEventListener('DOMContentLoaded', () => {
+  if (typeof svgPanZoom === 'function') {
+    const panZoomTiger = svgPanZoom('#demo-tiger', {
+      zoomEnabled: true,
+      controlIconsEnabled: true,
+      fit: true,
+      center: true,
+      minZoom: 0.5,
+      maxZoom: 20,
+      zoomScaleSensitivity: 0.2,
+      panEnabled: true
+    });
+  } else {
+    console.error('svgPanZoom is not available');
+  }
+});
+
+
 
 // Show meaning on hover
 // Show detailed information on click
