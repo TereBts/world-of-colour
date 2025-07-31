@@ -14,6 +14,7 @@ h1 {
     font-size: 2.5rem;
     font-weight: 900;
     color: var(--primary-color);
+    margin: 0 4rem; 
 }
 
 h2 {
@@ -49,7 +50,7 @@ body {
 section {
     padding-bottom: 4rem;
     padding-top: 4rem;
-    margin: 0 auto; 
+    margin: 0 4rem; 
 }
 
 /* Colour Map styles */
