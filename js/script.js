@@ -263,8 +263,8 @@ document.getElementById('info-module').addEventListener('click', function (event
 });
 
 // Make world map responsive (example with zoom functionality)
-// Check if the device is mobile
-const isMobile = window.innerWidth <= 768;  // Adjust based on your desired breakpoint
+// Check if the device is mobile (adjust the breakpoint if needed)
+const isMobile = window.innerWidth <= 768;
 
 // Initialize panZoom with mobile pinch-to-zoom and desktop zoom controls
 window.addEventListener('DOMContentLoaded', () => {
@@ -275,12 +275,13 @@ window.addEventListener('DOMContentLoaded', () => {
       fit: true,
       center: true,
       minZoom: 0.5,
-      maxZoom: 5,  // Adjust as needed for mobile
+      maxZoom: 5,  // Adjust max zoom for mobile as needed
       zoomScaleSensitivity: 0.2,
       panEnabled: true,
+      disableDoubleClickZoom: true,  // Disable double-tap zoom on mobile
+      // Ensure pinch-to-zoom and mouse events are handled correctly
       onTouch: isMobile,  // Enable touch events for mobile
       onMouse: !isMobile,  // Enable mouse events for desktop
-      disableDoubleClickZoom: true,  // Disable double-tap zoom on mobile
     });
   } else {
     console.error('svgPanZoom is not available');
