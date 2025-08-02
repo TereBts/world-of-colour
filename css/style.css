@@ -48,8 +48,7 @@ body {
 }
 
 section {
-    padding-bottom: 4rem;
-    padding-top: 4rem;
+    padding: 2rem 0;
     margin: 0 auto; 
 }
 
@@ -104,5 +103,42 @@ section {
 .country.active {
   opacity: 1;
   cursor: pointer;
+}
+
+/*Hover module styles */
+#hover-info {
+  position: absolute;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  pointer-events: none;
+  font-size: 0.9rem;
+  max-width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.hover-hidden {
+  display: none;
+}
+
+/* Info module styles */
+#info-module {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 2px solid #444;
+  padding: 20px;
+  max-width: 600px;
+  z-index: 1001;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  border-radius: 12px;
+}
+
+.info-hidden {
+  display: none;
 }
 

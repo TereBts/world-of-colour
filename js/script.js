@@ -148,7 +148,7 @@ const countryData = {
   ]
 };
 
-//Add country .class to SVG elements
+//Add country class to SVG elements
 document.querySelectorAll("#colour-map svg path").forEach(el => {
   el.classList.add("country");
 });
@@ -186,6 +186,47 @@ document.getElementById("colour-select").addEventListener("change", function () 
 
 // Interact with world map
 
+// Show meaning of colour on country hover
+const hoverBox = document.getElementById('hover-info');
+const nameEl = document.getElementById('hover-country-name');
+const meaningEl = document.getElementById('hover-country-meaning');
+
+// Select all SVG countries with class "country"
+document.querySelectorAll('.country').forEach(country => {
+
+  // On hover (mouse moves over a country)
+  country.addEventListener('mousemove', function (e) {
+    const info = countryData[this.id];
+    if (info) {
+      // Update box content
+      nameEl.textContent = info.name;
+      meaningEl.textContent = info.meaning;
+
+      // Show the box and position it next to the mouse
+      hoverBox.classList.remove('hover-hidden');
+      hoverBox.style.left = e.pageX + 10 + 'px';
+      hoverBox.style.top = e.pageY + 10 + 'px';
+    }
+  });
+
+  // When mouse leaves the country, hide the box
+  country.addEventListener('mouseleave', () => {
+    hoverBox.classList.add('hover-hidden');
+  });
+
+  // On click, show the full info panel
+  country.addEventListener('click', function () {
+    const info = countryData[this.id];
+    if (info) {
+      document.getElementById('country-name').textContent = info.name;
+      document.getElementById('country-meaning').textContent = info.meaning;
+      document.getElementById('country-history').textContent = info.history;
+      document.getElementById('info-module').classList.remove('info-hidden');
+    }
+  });
+});
+
+
 
 // Make world map responsive
 window.addEventListener('DOMContentLoaded', () => {
@@ -207,7 +248,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-// Show meaning on hover
+
 // Show detailed information on click
 // Reset or clear selections
 

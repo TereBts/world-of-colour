@@ -989,8 +989,18 @@
     </svg>
                 </div>
                 <!-- Hidden Modals for country information -->
-                <div id="hover-info" class="hover-info hidden"></div>
-                <div id="info-panel" class="info-panel hidden"></div>
+                <!-- Hover modal -->
+                <div id="hover-info" class="hover-hidden">
+                    <strong id="hover-country-name"></strong>
+                    <p id="hover-country-meaning"></p>
+                </div>
+                <!-- Click modal -->
+                <div id="info-module" class="info-hidden">
+                    <h2 id="country-name"></h2>
+                    <p><strong>Meaning:</strong> <span id="country-meaning"></span></p>
+                    <p><strong>History:</strong> <span id="country-history"></span></p>
+                </div>
+
             </section>
         </main>
 
