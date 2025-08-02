@@ -263,17 +263,23 @@ document.getElementById('info-module').addEventListener('click', function (event
 });
 
 // Make world map responsive (example with zoom functionality)
+// Check if the device is mobile
+const isMobile = window.innerWidth <= 768;  // Adjust based on your desired breakpoint
+
+// Initialize panZoom with mobile pinch-to-zoom and desktop zoom controls
 window.addEventListener('DOMContentLoaded', () => {
   if (typeof svgPanZoom === 'function') {
     const panZoomTiger = svgPanZoom('#demo-tiger', {
       zoomEnabled: true,
-      controlIconsEnabled: true,
+      controlIconsEnabled: !isMobile,  // Disable control icons on mobile
       fit: true,
       center: true,
       minZoom: 0.5,
-      maxZoom: 20,
+      maxZoom: 5,  // Adjust as needed for mobile
       zoomScaleSensitivity: 0.2,
-      panEnabled: true
+      panEnabled: true,
+      onTouch: isMobile,  // Enable touch events for mobile
+      onMouse: !isMobile  // Enable mouse events for desktop
     });
   } else {
     console.error('svgPanZoom is not available');
