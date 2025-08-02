@@ -279,7 +279,8 @@ window.addEventListener('DOMContentLoaded', () => {
       zoomScaleSensitivity: 0.2,
       panEnabled: true,
       onTouch: isMobile,  // Enable touch events for mobile
-      onMouse: !isMobile  // Enable mouse events for desktop
+      onMouse: !isMobile,  // Enable mouse events for desktop
+      disableDoubleClickZoom: true,  // Disable double-tap zoom on mobile
     });
   } else {
     console.error('svgPanZoom is not available');
