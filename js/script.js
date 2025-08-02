@@ -184,6 +184,22 @@ document.getElementById("colour-select").addEventListener("change", function () 
   });
 });
 
+// Helper: Get country info by SVG ID
+function getCountryInfoById(id) {
+  for (const colour in countryData) {
+    for (const country of countryData[colour]) {
+      if (country.ids.includes(id)) {
+        return {
+          name: country.country,
+          meaning: country.meaning,
+          history: country.context
+        };
+      }
+    }
+  }
+  return null;
+}
+
 // Interact with world map
 
 // Show meaning of colour on country hover
@@ -196,13 +212,11 @@ document.querySelectorAll('.country').forEach(country => {
 
   // On hover (mouse moves over a country)
   country.addEventListener('mousemove', function (e) {
-    const info = countryData[this.id];
+    const info = getCountryInfoById(this.id);
     if (info) {
-      // Update box content
       nameEl.textContent = info.name;
       meaningEl.textContent = info.meaning;
 
-      // Show the box and position it next to the mouse
       hoverBox.classList.remove('hover-hidden');
       hoverBox.style.left = e.pageX + 10 + 'px';
       hoverBox.style.top = e.pageY + 10 + 'px';
@@ -216,7 +230,7 @@ document.querySelectorAll('.country').forEach(country => {
 
   // On click, show the full info panel
   country.addEventListener('click', function () {
-    const info = countryData[this.id];
+    const info = getCountryInfoById(this.id);
     if (info) {
       document.getElementById('country-name').textContent = info.name;
       document.getElementById('country-meaning').textContent = info.meaning;
