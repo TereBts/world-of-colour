@@ -55,6 +55,7 @@ section {
 /* Colour Map styles */
 #colour-map {
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,6 +72,12 @@ section {
 
 }
 
+/* SVG pan zoom styles */
+#demo-tiger {
+  width: 100%;
+  height: auto; /* Let the SVG adjust size responsively */
+}
+
 /* SVG zoom buttons */
 
 .svg-pan-zoom .svg-pan-zoom_controls {
@@ -84,46 +91,25 @@ section {
   height: 2rem;
 }
 
-/* Colour highlights */
-
+/* Highlight styles */
 .highlight-red {
   fill: red !important;
 }
-
 .highlight-green {
   fill: green !important;
 }
-
 .highlight-yellow {
   fill: yellow !important;
 }
-
 .highlight-blue {
   fill: blue !important;
 }
 
 
+
 .country.active {
   opacity: 1;
   cursor: pointer;
-}
-
-/* Darker shade on hover for each colour */
-
-.highlight-red:hover {
-  fill: darkred !important;
-}
-
-.highlight-green:hover {
-  fill: #006400 !important; /* dark green */
-}
-
-.highlight-yellow:hover {
-  fill: goldenrod !important;
-}
-
-.highlight-blue:hover {
-  fill: #00008b !important; /* dark blue */
 }
 
 /*Hover module styles */
