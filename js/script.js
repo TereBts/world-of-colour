@@ -207,32 +207,6 @@ document.getElementById("colour-select").addEventListener("change", function () 
   });
 });
 
-
-// Initialize SVG Toolbelt zoom functionality
-const SvgToolbelt = window.SvgToolbelt;
-
-document.addEventListener('DOMContentLoaded', function () {
-  const svgContainer = document.querySelector('.zoomable');
-  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-  if (typeof SvgToolbelt === 'function' && svgContainer) {
-    const enhancer = new SvgToolbelt(svgContainer, {
-      pinchZoom: true,
-      pan: true,
-      mouseWheelZoom: !isTouchDevice,
-      zoomButtons: !isTouchDevice,
-      zoomStep: isTouchDevice ? 0.25 : 0.1,
-      transitionDuration: isTouchDevice ? 150 : 300,
-      enableKeyboard: false,
-    });
-    enhancer.init();
-  } else {
-    console.error('SvgToolbelt is not defined or container not found');
-  }
-});
-
-
-
 // Interact with the world map
 document.querySelectorAll('.country').forEach(country => {
 
@@ -274,6 +248,7 @@ document.querySelectorAll('.country').forEach(country => {
 });
 
 
+
 // Close the info module when clicking outside
 window.addEventListener('click', function (e) {
   const modal = document.getElementById('info-module');
@@ -287,9 +262,8 @@ document.getElementById('info-module').addEventListener('click', function (event
   event.stopPropagation(); // Stop propagation to prevent closing
 });
 
-// Make world map responsive with zoom functionality
-
-/* Check if the device is mobile (adjust the breakpoint if needed)
+// Make world map responsive (with zoom functionality)
+// Check if the device is mobile (adjust the breakpoint if needed)
 const isMobile = window.innerWidth <= 768;
 
 // Initialize panZoom with mobile pinch-to-zoom and desktop zoom controls
@@ -312,6 +286,4 @@ window.addEventListener('DOMContentLoaded', () => {
   } else {
     console.error('svgPanZoom is not available');
   }
-}); 
-*/
-
+});
