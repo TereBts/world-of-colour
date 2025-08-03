@@ -209,34 +209,31 @@ document.getElementById("colour-select").addEventListener("change", function () 
 
 // Interact with the world map
 document.querySelectorAll('.country').forEach(country => {
+  // Hover (desktop only)
+  if (!('ontouchstart' in window || navigator.maxTouchPoints > 0)) {
+    country.addEventListener('mousemove', function (e) {
+      if (!selectedColour) return;
+      const info = getCountryInfoById(this.id);
+      if (info) {
+        document.getElementById('hover-country-name').textContent = info.name;
+        document.getElementById('hover-country-meaning').textContent = info.meaning;
+        const hoverBox = document.getElementById('hover-info');
+        hoverBox.classList.remove('hover-hidden');
+        hoverBox.style.left = e.pageX + 10 + 'px';
+        hoverBox.style.top = e.pageY + 10 + 'px';
+      }
+    });
 
-  // Hover
-  country.addEventListener('mousemove', function (e) {
-    if (!selectedColour) return; // Prevent hover when no colour is selected
+    country.addEventListener('mouseleave', () => {
+      if (!selectedColour) return;
+      document.getElementById('hover-info').classList.add('hover-hidden');
+    });
+  }
 
-    const info = getCountryInfoById(this.id);
-    if (info) {
-      document.getElementById('hover-country-name').textContent = info.name;
-      document.getElementById('hover-country-meaning').textContent = info.meaning;
-
-      const hoverBox = document.getElementById('hover-info');
-      hoverBox.classList.remove('hover-hidden');
-      hoverBox.style.left = e.pageX + 10 + 'px';
-      hoverBox.style.top = e.pageY + 10 + 'px';
-    }
-  });
-
-  // Leave
-  country.addEventListener('mouseleave', () => {
-    if (!selectedColour) return;
-    document.getElementById('hover-info').classList.add('hover-hidden');
-  });
-
-  // Click
+  // Click (desktop)
   country.addEventListener('click', function (event) {
     if (!selectedColour) return;
     event.stopPropagation();
-
     const info = getCountryInfoById(this.id);
     if (info) {
       document.getElementById('country-name').textContent = info.name;
@@ -245,8 +242,23 @@ document.querySelectorAll('.country').forEach(country => {
       document.getElementById('info-module').classList.remove('info-hidden');
     }
   });
-});
 
+  // Tap (mobile)
+  country.addEventListener('touchstart', function (e) {
+    if (!selectedColour) return;
+    const info = getCountryInfoById(this.id);
+    if (info) {
+      document.getElementById('country-name').textContent = info.name;
+      document.getElementById('country-meaning').textContent = info.meaning;
+      document.getElementById('country-history').textContent = info.history;
+      document.getElementById('info-module').classList.remove('info-hidden');
+    }
+
+    // Hide hover box if it was visible
+    document.getElementById('hover-info').classList.add('hover-hidden');
+    e.stopPropagation();
+  });
+});
 
 
 // Close the info module when clicking outside
