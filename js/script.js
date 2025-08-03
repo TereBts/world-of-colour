@@ -262,12 +262,21 @@ document.querySelectorAll('.country').forEach(country => {
 
 
 // Close the info module when clicking outside
+//desktop
 window.addEventListener('click', function (e) {
   const modal = document.getElementById('info-module');
   if (!modal.contains(e.target) && !modal.classList.contains('info-hidden')) {
     modal.classList.add('info-hidden');
   }
 });
+//mobile
+window.addEventListener('touchstart', function (e) {
+  const modal = document.getElementById('info-module');
+  if (!modal.contains(e.target) && !modal.classList.contains('info-hidden')) {
+    modal.classList.add('info-hidden');
+  }
+});
+
 
 // Prevent closing modal when clicking inside it
 document.getElementById('info-module').addEventListener('click', function (event) {
