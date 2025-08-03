@@ -271,17 +271,16 @@ window.addEventListener('DOMContentLoaded', () => {
   if (typeof svgPanZoom === 'function') {
     const panZoomTiger = svgPanZoom('#demo-tiger', {
       zoomEnabled: true,
-      controlIconsEnabled: !isMobile,  // Disable control icons on mobile
+      controlIconsEnabled: true, 
       fit: true,
       center: true,
-      minZoom: 0.5,
+      minZoom: 0.9,
       maxZoom: 5,  // Adjust max zoom for mobile as needed
       zoomScaleSensitivity: 0.2,
       panEnabled: true,
-      disableDoubleClickZoom: true,  // Disable double-tap zoom on mobile
-      // Ensure pinch-to-zoom and mouse events are handled correctly
-      onTouch: isMobile,  // Enable touch events for mobile
-      onMouse: !isMobile,  // Enable mouse events for desktop
+      contain: true,
+      mouseWheelZoomEnabled: false, // Disable mouse wheel zoom 
+
     });
   } else {
     console.error('svgPanZoom is not available');
