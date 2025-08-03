@@ -273,11 +273,15 @@ window.addEventListener('click', function (e) {
 window.addEventListener('touchstart', function (e) {
   setTimeout(() => {
     const modal = document.getElementById('info-module');
-    if (!modal.contains(e.target) && !modal.classList.contains('info-hidden')) {
+    const isModal = modal.contains(e.target);
+    const isCountry = e.target.classList.contains('country');
+
+    if (!isModal && !isCountry && !modal.classList.contains('info-hidden')) {
       modal.classList.add('info-hidden');
     }
-  }, 100); // Delay slightly to let the tap event open the module first
+  }, 100);
 });
+
 
 
 // Prevent closing modal when clicking inside it
