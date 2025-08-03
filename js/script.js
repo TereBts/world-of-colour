@@ -269,14 +269,16 @@ window.addEventListener('click', function (e) {
     modal.classList.add('info-hidden');
   }
 });
-/*/mobile
+//mobile
 window.addEventListener('touchstart', function (e) {
-  const modal = document.getElementById('info-module');
-  if (!modal.contains(e.target) && !modal.classList.contains('info-hidden')) {
-    modal.classList.add('info-hidden');
-  }
+  setTimeout(() => {
+    const modal = document.getElementById('info-module');
+    if (!modal.contains(e.target) && !modal.classList.contains('info-hidden')) {
+      modal.classList.add('info-hidden');
+    }
+  }, 100); // Delay slightly to let the tap event open the module first
 });
-*/
+
 
 // Prevent closing modal when clicking inside it
 document.getElementById('info-module').addEventListener('click', function (event) {
