@@ -282,15 +282,13 @@ window.addEventListener('touchstart', function (e) {
   }, 100);
 });
 
-
-
-// Prevent closing modal when clicking inside it
+// Prevent closing module when clicking inside it
 document.getElementById('info-module').addEventListener('click', function (event) {
   event.stopPropagation(); // Stop propagation to prevent closing
 });
 
 // Make world map responsive (with zoom functionality)
-// Check if the device is mobile (adjust the breakpoint if needed)
+// Check if the device is mobile 
 const isMobile = window.innerWidth <= 768;
 
 // Initialize panZoom with mobile pinch-to-zoom and desktop zoom controls
