@@ -57,6 +57,16 @@ header {
     text-align: left;
 }
 
+.main-title {
+  font-size: 10rem;
+  word-break: break-word;
+}
+
+.of-text {
+  font-size: 0.5em;
+  vertical-align: middle;
+}
+
 section {
     background-color: var(--primary-color);
     color: #f0f0f0;
@@ -79,7 +89,7 @@ section {
 }
 
 .country {
-  fill: #b2d1c3; /* grey / green */
+  fill: #b2d1c3; /* light green */
   opacity: 0.5;
   transition: fill 0.4s ease, opacity 0.4s ease;
   cursor: default;
@@ -120,8 +130,6 @@ section {
 .highlight-blue {
   fill: blue !important;
 }
-
-
 
 .country.active {
   opacity: 1;
@@ -177,3 +185,9 @@ section {
   display: none;
 }
 
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 3.5rem;
+    text-align: left;
+  }
+}
