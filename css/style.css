@@ -219,11 +219,29 @@ section {
 /* Mobile styles */
 @media (max-width: 768px) {
   .main-title {
-    font-size: 3.5rem;
-    text-align: left;
-  }
-}
+        font-size: 3.5rem;
+        text-align: center;
+        margin-bottom: 50px;
+    }
 
-section {
-    padding: 0px 20px 0px 20px;
+    h2 {
+        text-align: center
+    }
+
+    p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    #colour-picker {
+        display: flex;
+        justify-content: center;
+    }
+
+    section {
+        padding: 0px 20px 0px 20px;
+    }
+
+
+
 }
