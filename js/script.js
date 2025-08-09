@@ -171,21 +171,10 @@ document.querySelectorAll("#colour-map svg path").forEach(el => {
 // Store the selected colour globally
 let selectedColour = '';
 
-const buttons = document.querySelectorAll('.btn-colour');
-
-// Click event listeners to highlight selected colour button on mobile 
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    if (window.innerWidth <= 768) {
-      buttons.forEach(btn => btn.classList.remove('selected'));
-       button.classList.add('selected');
-  });
-});    
-
 // Handle colour selection
 document.querySelectorAll('#colour-select input[name="colour"]').forEach(radio => {
   radio.addEventListener('change', function() {
-    selectedColour = this.value;  
+    selectedColour = this.value;
 
     // Remove previous highlights and hover functionality
     document.querySelectorAll("#colour-map .country").forEach((el) => {

@@ -90,7 +90,7 @@ section {
 }
 
 .country {
-  fill: #b2d1c3; /* light green */
+  fill: #bcefd8; /* light green */
   opacity: 0.5;
   transition: fill 0.4s ease, opacity 0.4s ease;
   cursor: default;
@@ -120,7 +120,7 @@ section {
 
 /* Highlight styles */
 .highlight-red {
-  fill: #E63946	 !important;
+  fill: #E63946 !important;
 }
 .highlight-green {
   fill: #06D6A0 !important;
@@ -258,16 +258,16 @@ section {
 
     /* Add background colors to labels by id */
     #red + label[for="red"] {
-        background-color: #d9534f; /* Bootstrap danger red */
+        background-color: #E63946; 
     }
     #green + label[for="green"] {
-        background-color: #5cb85c; /* Bootstrap success green */
+        background-color: #06D6A0;
     }
     #yellow + label[for="yellow"] {
-        background-color: #f0ad4e; /* Bootstrap warning yellow */
+        background-color: #FFE94C; 
     }
     #blue + label[for="blue"] {
-        background-color: #0275d8; /* Bootstrap primary blue */
+        background-color: #118AB2; 
     }
 
     /* Make all colour buttons slightly faded by default */
@@ -280,6 +280,19 @@ section {
     .btn-colour.selected {
         opacity: 1; !important;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Style the label when its corresponding radio input is checked */
+    #colour-select input[type="radio"]:checked + label {
+        opacity: 1 !important; /* fully opaque */
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        border-width: 2px;
+    }
+
+    #colour-select label {
+        opacity: 0.6;
+        transition: opacity 0.3s ease;
+        cursor: pointer;
     }
 }
 
