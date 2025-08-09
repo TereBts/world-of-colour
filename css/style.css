@@ -79,12 +79,6 @@ section {
 
 
 /* Colour Map styles */
-#colour-picker label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 80px;
-}
 
 #colour-map {
     width: 100%;
@@ -241,7 +235,7 @@ section {
         text-align: center;
     }
 
-    #colour-picker {
+    #colour-select {
         display: flex;
         justify-content: center;
     }
@@ -252,7 +246,7 @@ section {
 
     /* Colour Picker styles */
     /* Remove colour picker label + create rounded buttons */
-    #colour-picker label {
+    #colour-select label {
         min-width: 40px;
         width: 40px;
         height: 40px;
@@ -275,10 +269,20 @@ section {
     #blue + label[for="blue"] {
         background-color: #0275d8; /* Bootstrap primary blue */
     }
+
+    /* Make all colour buttons slightly faded by default */
+    .btn-colour {
+        opacity: 0.6; !important;
+        transition: opacity 0.3s ease;
+    }
+
+  /* Highlight the selected button */
+    .btn-colour.selected {
+        opacity: 1; !important;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
 }
 
 
 
 
-
-}
