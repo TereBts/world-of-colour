@@ -191,8 +191,9 @@ section {
     bottom: -60px; 
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    color: white;
+    background: #b2d1c3;
+    color: rgb(0, 0, 0);
+    font-family: var(--secondary-font);
     text-align: center;
     padding: 10px;
     font-size: 1rem;
