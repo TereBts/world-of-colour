@@ -79,6 +79,13 @@ section {
 
 
 /* Colour Map styles */
+#colour-picker label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+}
+
 #colour-map {
     width: 100%;
     height: auto;
@@ -206,6 +213,7 @@ section {
 }
 
 
+
 /* Responsive styles */
 
 /* Desktop styles */
@@ -241,6 +249,35 @@ section {
     section {
         padding: 0px 20px 0px 20px;
     }
+
+    /* Colour Picker styles */
+    /* Remove colour picker label + create rounded buttons */
+    #colour-picker label {
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border-radius: 50%;
+        text-indent: -9999px; /* hide text */
+        position: relative;
+    }
+
+    /* Add background colors to labels by id */
+    #red + label[for="red"] {
+        background-color: #d9534f; /* Bootstrap danger red */
+    }
+    #green + label[for="green"] {
+        background-color: #5cb85c; /* Bootstrap success green */
+    }
+    #yellow + label[for="yellow"] {
+        background-color: #f0ad4e; /* Bootstrap warning yellow */
+    }
+    #blue + label[for="blue"] {
+        background-color: #0275d8; /* Bootstrap primary blue */
+    }
+}
+
+
 
 
 

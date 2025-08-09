@@ -172,40 +172,40 @@ document.querySelectorAll("#colour-map svg path").forEach(el => {
 let selectedColour = '';
 
 // Handle colour selection
-document.getElementById("colour-select").addEventListener("change", function () {
-  selectedColour = this.value;
+document.querySelectorAll('#colour-select input[name="colour"]').forEach(radio => {
+  radio.addEventListener('change', function() {
+    selectedColour = this.value;  
 
-  // Remove previous highlights and hover functionality
-  document.querySelectorAll("#colour-map .country").forEach((el) => {
-    el.classList.remove("highlight-red", "highlight-green", "highlight-yellow", "highlight-blue");
-    el.classList.remove('disabled-hover'); // Remove the hover disabling
-  });
+    // Remove previous highlights and hover functionality
+    document.querySelectorAll("#colour-map .country").forEach((el) => {
+      el.classList.remove("highlight-red", "highlight-green", "highlight-yellow", "highlight-blue");
+      el.classList.remove('disabled-hover');
+    });
 
-  // Get the array of countries for the selected colour
-  const countriesForColour = countryData[selectedColour];
-  if (!countriesForColour) return;
+    // Get the countries for the selected colour
+    const countriesForColour = countryData[selectedColour];
+    if (!countriesForColour) return;
 
-  // Loop through each country in the array and apply highlights only to those
-  countriesForColour.forEach((countryObj) => {
-    countryObj.ids.forEach((id) => {
-      const svgElement = document.getElementById(id);
-      if (svgElement) {
-        svgElement.classList.add(`highlight-${selectedColour}`);
-      } else {
-        console.warn(`Element with ID "${id}" not found in the SVG`);
+    // Highlight relevant countries
+    countriesForColour.forEach((countryObj) => {
+      countryObj.ids.forEach((id) => {
+        const svgElement = document.getElementById(id);
+        if (svgElement) {
+          svgElement.classList.add(`highlight-${selectedColour}`);
+        }
+      });
+    });
+
+    // Enable hover only on countries of the selected colour
+    document.querySelectorAll('.country').forEach(country => {
+      const isInColour = countriesForColour.some(c => c.ids.includes(country.id));
+      if (!isInColour) {
+        country.classList.add('disabled-hover');
       }
     });
   });
-
-  // Enable hover only for countries in the selected colour
-  document.querySelectorAll('.country').forEach(country => {
-    // If country is in the selected colour group, enable hover
-    const isCountryInSelectedColour = countriesForColour.some(c => c.ids.includes(country.id));
-    if (!isCountryInSelectedColour) {
-      country.classList.add('disabled-hover');
-    }
-  });
 });
+
 
 // Interact with the world map
 document.querySelectorAll('.country').forEach(country => {
@@ -325,3 +325,4 @@ function checkOrientation() {
   window.addEventListener('resize', checkOrientation);
   window.addEventListener('orientationchange', checkOrientation);
   document.addEventListener('DOMContentLoaded', checkOrientation);
+
