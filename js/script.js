@@ -311,3 +311,17 @@ window.addEventListener('DOMContentLoaded', () => {
     console.error('svgPanZoom is not available');
   }
 });
+
+// Display a message for landscape orientation on mobile
+function checkOrientation() {
+    const msg = document.getElementById('landscape-message');
+    if (window.innerWidth < 768 && window.innerHeight > window.innerWidth) {
+      msg.classList.add('show');  // slide in
+    } else {
+      msg.classList.remove('show'); // slide out
+    }
+  }
+
+  window.addEventListener('resize', checkOrientation);
+  window.addEventListener('orientationchange', checkOrientation);
+  document.addEventListener('DOMContentLoaded', checkOrientation);

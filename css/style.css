@@ -185,7 +185,35 @@ section {
   display: none;
 }
 
+/* Container for mobile users message */
+#landscape-message {
+    position: fixed;
+    bottom: -60px; 
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    z-index: 9999;
+    transition: bottom 0.4s ease; 
+}
+
+#landscape-message.show {
+    bottom: 0;
+}
+
+
 /* Responsive styles */
+
+/* Desktop styles */
+@media screen and (min-width: 769px) {
+    #landscape-message {
+      display: none !important;
+    }
+}
+
 
 /* Mobile styles */
 @media (max-width: 768px) {
