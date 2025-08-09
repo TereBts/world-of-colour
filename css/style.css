@@ -119,16 +119,16 @@ section {
 
 /* Highlight styles */
 .highlight-red {
-  fill: red !important;
+  fill: #E63946	 !important;
 }
 .highlight-green {
-  fill: green !important;
+  fill: #06D6A0 !important;
 }
 .highlight-yellow {
-  fill: yellow !important;
+  fill: #FFE94C !important;
 }
 .highlight-blue {
-  fill: blue !important;
+  fill: #118AB2 !important;
 }
 
 .country.active {
@@ -185,9 +185,16 @@ section {
   display: none;
 }
 
+/* Responsive styles */
+
+/* Mobile styles */
 @media (max-width: 768px) {
   .main-title {
     font-size: 3.5rem;
     text-align: left;
   }
+}
+
+section {
+    padding: 0px 20px 0px 20px;
 }
