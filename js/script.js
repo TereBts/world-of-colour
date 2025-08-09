@@ -312,6 +312,23 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Resize and re-center the map on window resize or orientation change
+window.addEventListener('resize', () => {
+  if (panZoomTiger) {
+    panZoomTiger.resize();
+    panZoomTiger.fit();
+    panZoomTiger.center();
+  }
+});
+
+window.addEventListener('orientationchange', () => {
+  if (panZoomTiger) {
+    panZoomTiger.resize();
+    panZoomTiger.fit();
+    panZoomTiger.center();
+  }
+});
+
 // Display a message for landscape orientation on mobile
 function checkOrientation() {
     const msg = document.getElementById('landscape-message');
