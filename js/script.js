@@ -292,36 +292,29 @@ document.getElementById('info-module').addEventListener('click', function (event
 const isMobile = window.innerWidth <= 768;
 
 // Initialize panZoom with mobile pinch-to-zoom and desktop zoom controls
+let panZoomTiger;
+
 window.addEventListener('DOMContentLoaded', () => {
   if (typeof svgPanZoom === 'function') {
-    const panZoomTiger = svgPanZoom('#demo-tiger', {
+    panZoomTiger = svgPanZoom('#demo-tiger', {
       zoomEnabled: true,
       controlIconsEnabled: true, 
-      fit: true,
-      center: true,
+      fit: 1,
+      center: 1,
       minZoom: 0.9,
       maxZoom: 5,  // Adjust max zoom for mobile as needed
       zoomScaleSensitivity: 0.2,
       panEnabled: true,
       contain: true,
       mouseWheelZoomEnabled: false, // Disable mouse wheel zoom 
-
     });
   } else {
     console.error('svgPanZoom is not available');
   }
 });
 
-// Resize and re-center the map on window resize or orientation change
+// Handle resizing/orientation changes on the world map
 window.addEventListener('resize', () => {
-  if (panZoomTiger) {
-    panZoomTiger.resize();
-    panZoomTiger.fit();
-    panZoomTiger.center();
-  }
-});
-
-window.addEventListener('orientationchange', () => {
   if (panZoomTiger) {
     panZoomTiger.resize();
     panZoomTiger.fit();
