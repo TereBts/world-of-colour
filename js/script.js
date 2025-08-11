@@ -304,13 +304,14 @@ let panZoomTiger;
 
 window.addEventListener('DOMContentLoaded', () => {
   if (typeof svgPanZoom === 'function') {
+
     panZoomTiger = svgPanZoom('#demo-tiger', {
       zoomEnabled: true,
       controlIconsEnabled: true, 
       fit: 1,
       center: 1,
       minZoom: 0.9,
-      maxZoom: 5,  // Adjust max zoom for mobile as needed
+      maxZoom: 5,
       zoomScaleSensitivity: 0.2,
       panEnabled: true,
       contain: true,

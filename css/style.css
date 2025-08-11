@@ -177,7 +177,7 @@ section {
 #info-module p {
   color: #333;
   font-family: 'Cal Sans', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 
 .info-hidden {
@@ -311,6 +311,13 @@ section {
     left: 50%;
     transform: translateX(-50%);
   }
+
+   /* Hover info styles */
+    #info-module p {
+    color: #333;
+    font-family: 'Cal Sans', sans-serif;
+    font-size: 1.2rem;
+}
 }
 
 
