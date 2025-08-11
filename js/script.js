@@ -172,6 +172,9 @@ document.querySelectorAll("#colour-map svg path").forEach(el => {
 let selectedColour = '';
 
 // Handle colour selection
+const hoverInfo = document.getElementById('hover-info');
+const clickModal = document.getElementById('info-module');
+
 document.querySelectorAll('#colour-select input[name="colour"]').forEach(radio => {
   radio.addEventListener('change', function() {
     selectedColour = this.value;
@@ -203,9 +206,14 @@ document.querySelectorAll('#colour-select input[name="colour"]').forEach(radio =
         country.classList.add('disabled-hover');
       }
     });
+
+    // Change background color of hover and click info boxes
+    [hoverInfo, clickModal].forEach(box => {
+      box.classList.remove('bg-red', 'bg-green', 'bg-yellow', 'bg-blue');
+      box.classList.add(`bg-${selectedColour}`);
+    });
   });
 });
-
 
 // Interact with the world map
 document.querySelectorAll('.country').forEach(country => {
