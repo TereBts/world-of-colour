@@ -10,6 +10,23 @@
 
 /* Global styles */
 
+body {
+    background-color: var(--primary-color);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+ section {
+    background-color: var(--primary-color);
+    color: #f0f0f0;
+    padding: 20px;
+}
+
+.container-fluid {
+  background-color: #171E4B !important;
+}
+
 /* Navbar styles */
 .navbar .container-fluid {
     background-color: #f0f0f0 !important;
@@ -33,19 +50,12 @@ h1 {
     font-size: 50rem;
     font-weight: 900;
     color: #f0f0f0;
-
 }
 
 h2 {
     font-family: var(--secondary-font);
     font-size: 4rem;
     font-weight: 600;
-}
-
-body {
-    background-color: var(--primary-color);
-    width: 100%;
-    margin: 0;
 }
 
 body p {
@@ -70,16 +80,6 @@ header {
 .of-text {
   font-size: 0.5em;
   vertical-align: middle;
-}
-
-section {
-    background-color: var(--primary-color);
-    color: #f0f0f0;
-    padding: 20px;
-}
-
-.container-fluid {
-  background-color: #171E4B !important;
 }
 
 /* Colour Map styles */
