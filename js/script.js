@@ -141,7 +141,7 @@ const countryData = {
     },
     {
       country: "UK",
-      ids: ["UK-1","UK-2"],
+      ids: ["UK-1", "UK-2"],
       meaning: "Loyalty and trust",
       context: "Found in the Union Jack representing Scotland and monarchy; often seen in uniforms and official branding."
     }
@@ -176,7 +176,7 @@ const hoverInfo = document.getElementById('hover-info');
 const clickModal = document.getElementById('info-module');
 
 document.querySelectorAll('#colour-select input[name="colour"]').forEach(radio => {
-  radio.addEventListener('change', function() {
+  radio.addEventListener('change', function () {
     selectedColour = this.value;
 
     // Remove previous highlights and hover functionality
@@ -307,7 +307,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     panZoomTiger = svgPanZoom('#demo-tiger', {
       zoomEnabled: true,
-      controlIconsEnabled: true, 
+      controlIconsEnabled: true,
       fit: 1,
       center: 1,
       minZoom: 0.9,
@@ -333,19 +333,19 @@ window.addEventListener('resize', () => {
 
 // Display a message for landscape orientation on mobile
 function checkOrientation() {
-    const msg = document.getElementById('landscape-message');
-    if (window.innerWidth < 768 && window.innerHeight > window.innerWidth) {
-      msg.classList.add('show');  // slide in
-    } else {
-      msg.classList.remove('show'); // slide out
-    }
+  const msg = document.getElementById('landscape-message');
+  if (window.innerWidth < 768 && window.innerHeight > window.innerWidth) {
+    msg.classList.add('show');  // slide in
+  } else {
+    msg.classList.remove('show'); // slide out
   }
-  
-  window.addEventListener('resize', checkOrientation);
-  window.addEventListener('orientationchange', checkOrientation);
-  document.addEventListener('DOMContentLoaded', checkOrientation);
+}
 
-  // Close button handler for info module
+window.addEventListener('resize', checkOrientation);
+window.addEventListener('orientationchange', checkOrientation);
+document.addEventListener('DOMContentLoaded', checkOrientation);
+
+// Close button handler for info module
 document.getElementById("close-info").addEventListener("click", function () {
-    document.getElementById("info-module").classList.add("info-hidden");
+  document.getElementById("info-module").classList.add("info-hidden");
 });
