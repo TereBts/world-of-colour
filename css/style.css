@@ -95,7 +95,7 @@ header {
 }
 
 .main-title {
-  font-size: 10rem;
+  font-size: 7.5rem;
   word-break: break-word;
 }
 
@@ -265,6 +265,18 @@ footer p {
     #landscape-message {
       display: none !important;
     }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-title {
+    font-size: 5rem; 
+    text-align: left; 
+  }
+
+  .min-vh-100 {
+    min-height: auto !important; /* Remove the 100vh min-height on tablets */
+  }
 }
 
 
