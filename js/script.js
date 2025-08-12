@@ -340,7 +340,12 @@ function checkOrientation() {
       msg.classList.remove('show'); // slide out
     }
   }
-
+  
   window.addEventListener('resize', checkOrientation);
   window.addEventListener('orientationchange', checkOrientation);
   document.addEventListener('DOMContentLoaded', checkOrientation);
+
+  // Close button handler for info module
+document.getElementById("close-info").addEventListener("click", function () {
+    document.getElementById("info-module").classList.add("info-hidden");
+});

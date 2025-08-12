@@ -217,6 +217,12 @@ header {
   display: none;
 }
 
+#close-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
 /* Modal background colours */
 .bg-red { background-color: #E63946; color: white;}
 .bg-green { background-color: #06D6A0; color: white; }
