@@ -345,3 +345,7 @@ function checkOrientation() {
   window.addEventListener('orientationchange', checkOrientation);
   document.addEventListener('DOMContentLoaded', checkOrientation);
 
+//Event listener for orientation change
+window.addEventListener("orientationchange", () => {
+  document.body.style.width = window.innerWidth + "px";
+});
