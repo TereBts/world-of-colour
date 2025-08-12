@@ -243,7 +243,19 @@ header {
     bottom: 0;
 }
 
+/* Footer styles */
+footer {
+    background-color: var(--background-color);
+    padding: 20px;
+    width: 100%;
+}
 
+footer p {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: center;
+}
 
 /* Responsive styles */
 
