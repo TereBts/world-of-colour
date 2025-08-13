@@ -1,3 +1,6 @@
+/* global svgPanZoom */
+// JavaScript for the World of Colour project
+
 // Country data
 const countryData = {
   red: [
@@ -107,7 +110,7 @@ const countryData = {
       country: "Greece",
       ids: ["GR-1", "GR-2"],
       meaning: "Protection from evil",
-      context: 'Blue eyes or beads ("mati") ward off the evil eye.'
+      context: "Blue eyes or beads ('mati') ward off the evil eye."
     },
     {
       country: "India",
@@ -296,8 +299,6 @@ document.getElementById('info-module').addEventListener('click', function (event
 });
 
 // Make world map responsive (with zoom functionality)
-// Check if the device is mobile 
-const isMobile = window.innerWidth <= 768;
 
 // Initialize panZoom with mobile pinch-to-zoom and desktop zoom controls
 let panZoomTiger;

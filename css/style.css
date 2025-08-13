@@ -214,8 +214,7 @@ header {
     z-index: 1001;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border-radius: 12px;
-    color: black;
-    !important
+    color: black !important;
 }
 
 #info-module p {
@@ -411,15 +410,13 @@ footer p {
 
     /* Make all colour buttons slightly faded by default */
     .btn-colour {
-        opacity: 0.6;
-        !important;
+        opacity: 0.6 !important;
         transition: opacity 0.3s ease;
     }
 
     /* Highlight the selected button */
     .btn-colour.selected {
-        opacity: 1;
-        !important;
+        opacity: 1 !important;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     }
 
