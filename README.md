@@ -322,7 +322,7 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 
 ### Manual Testing
 
-* Browser Compatibility
+**Browser Compatibility**
 
 Browser | Outcome | Pass/Fail  
 --- | --- | ---
@@ -331,7 +331,7 @@ Safari | No appearance, responsiveness nor functionality issues. | Pass
 Mozilla Firefox | Scrollbar is visible even though it should be hidden. <br>No responsiveness nor functionality issues.| Pass
 Microsoft Edge | No appearance, responsiveness nor functionality issues. | Pass
 
-* Device compatibility
+**Device compatibility**
 
 Device | Outcome | Pass/Fail
 --- | --- | ---
@@ -340,9 +340,9 @@ Dell Latitude 5300 | No appearance, responsiveness nor functionality issues. | P
 iPad Pro 12.9" | No appearance, responsiveness nor functionality issues. | Pass
 iPhone 15 Pro | No appearance, responsiveness nor functionality issues. | Pass
 
-* Common Elements Testing
+**Common Elements Testing**
 
-    - General
+* General
 
 Feature | Outcome | Pass/Fail
 --- | --- | ---
@@ -351,7 +351,7 @@ Footer Links | All external links open in a new tab. | Pass
 Responsive Layout | Layout adapts correctly across desktop, tablet, and mobile screen sizes. | Pass
 Bootstrap Styling | Bootstrap classes are applied consistently for spacing, typography, and buttons. | Pass
 
-    - Map Interaction
+* Map Interaction
 
 Feature | Outcome | Pass/Fail
 --- | --- | ---
@@ -361,7 +361,7 @@ Hover Tooltip | Tooltip displays country name and colour meaning correctly. | Pa
 Country Click | Clicking on a country opens central modal with correct historical/context information. | Pass
 Modal Close Button | Closes modal and returns to map view as expected. | Pass
 
-    - Colour Selection
+* Colour Selection
 
 Feature | Outcome | Pass/Fail
 --- | --- | ---
@@ -370,7 +370,7 @@ Multiple Colours | Different countries can be assigned different colours without
 Reset Colours Button | Clears all colour selections and restores default map state. | Pass
 
 
-* Accessibility
+**Accessibility**
 
 Feature | Outcome | Pass/Fail
 --- | --- | ---
@@ -378,7 +378,7 @@ Keyboard Navigation | Tab key cycles through interactive elements in logical ord
 ARIA Labels | ARIA labels are present for key elements like buttons and map controls. | Pass
 High Contrast Mode | Content remains visible and usable in high-contrast display settings. | Pass
 
-* Error Handling
+**Error Handling**
 
 Feature | Outcome | Pass/Fail
 --- | --- | ---
