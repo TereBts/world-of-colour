@@ -436,10 +436,10 @@ However, if I were to implement automated testing in the future, I would use Jes
 
 ## Finished Product
 
-Page / Section | Image
+Page | Image
 --- | ---
-Home Page - Desktop | [Desktop version image1](assets/readme/home-final-desktop.png) [Desktop version image2](assets/readme/home-final-desktop2.png)
-Home Page - Mobile | [Mobile Version Image1](assets/readme/home-mobile.jpg) [Mobile Version Image2](assets/readme/home-mobile2.jpg)
+Home Page - Desktop | ![Desktop version image1](assets/readme/home-final-desktop.png) ![Desktop version image2](assets/readme/home-final-desktop2.png)
+Home Page - Mobile | ![Mobile Version Image1](assets/readme/home-mobile.jpg) ![Mobile Version Image2](assets/readme/home-mobile2.jpg)
 404 Error Page | ![404 error page image](assets/readme/404-page.png)
 
 [Back to top ⇧](#world-of-colour)
