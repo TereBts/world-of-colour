@@ -160,7 +160,7 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 
 ### 404 Error Page
 
-![Error Page image] (assets/readme/404-page.png)
+![Error Page image](assets/readme/404-page.png)
 
 * A dedicated error page is shown if the user enters an incorrect URL.
 
