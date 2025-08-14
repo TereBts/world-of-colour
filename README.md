@@ -1,6 +1,6 @@
 # World of Colour
 
-[World of Colour mockup images](assets/readme/woc-responsive.png)
+![World of Colour mockup images](assets/readme/woc-responsive.png)
 
 World of Colour is an interactive web project that explores the cultural meanings and symbolism of colours in different countries around the world. By selecting a colour, users can see which countries associate that colour with specific traditions, emotions, or historical events, and learn more about the stories behind these associations.
 
