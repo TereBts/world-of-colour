@@ -1,10 +1,12 @@
 # World of Colour
 
+[World of Colour mockup images](assets/readme/woc-responsive.png)
+
 World of Colour is an interactive web project that explores the cultural meanings and symbolism of colours in different countries around the world. By selecting a colour, users can see which countries associate that colour with specific traditions, emotions, or historical events, and learn more about the stories behind these associations.
 
 This website is designed to be both educational and visually engaging. The interface allows users to easily navigate between colours, hover over countries for quick insights, and click for in-depth information. It offers a global perspective on colour symbolism, highlighting how the same shade can carry vastly different meanings depending on cultural context.
 
-Visit the deployed website [here] (https://terebts.github.io/world-of-colour/).
+Visit the deployed website [here](https://terebts.github.io/world-of-colour/).
 
 ## Table of Contents
 
@@ -27,6 +29,7 @@ Visit the deployed website [here] (https://terebts.github.io/world-of-colour/).
     3. [Accessibility](#accessibility)
     4. [Tools Testing](#tools-testing)
     5. [Manual Testing](#manual-testing)
+    6. [Automated Testing](#automated-testing)
 5. [Finished Product](#finished-product)
 6. [Deployment](#deployment)
     1. [GitHub Pages](#github-pages)
@@ -62,8 +65,10 @@ Visit the deployed website [here] (https://terebts.github.io/world-of-colour/).
 
 * As a student, I want to quickly learn about colour perception in different regions.
 
+
+
 ### Color Scheme
-![Color scheme image] (assets/world-of-colour-website-palette.png)
+![Color scheme image](assets/world-of-colour-website-palette.png)
 
 The colours used in the site are dark blue for the background and a light grey for borders/lines and for the main text. I have also used a light grey/green for the world map. These colours are chosen to provide a neutral frame (with the theme of the Earth in mind), allowing the colours on the interactive map to stand out.
 
@@ -75,7 +80,9 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 
 [Balsamiq](https://balsamiq.com/) has been used to plan the wireframes of the site and display the placement of the different elements.
 
-[Back to top ⇧](#world of colour)
+![Home section wireframe image](assets/readme/wireframe.png)
+
+[Back to top ⇧](#world-of-colour)
 
 ## Features
 
@@ -87,14 +94,16 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 
 * **Header**
 
-![Header image]
+![Desktop Header image](assets/readme/desktop-header.png)
+![Mobile Header Image](assets/readme/mobile-header.png)
+
 - The header contains the site’s brand logo.
 
 - On mobile devices, the header simplifies to a central logo for a cleaner, more focused design.
 
 * **Footer**
 
-![Footer image]
+![Footer image](assets/readme/footer.png)
 
 - The footer contains links to social media channels.
 
@@ -104,13 +113,13 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 
 * **Landscape Orientation Message**
 
-![Landscape image]
+![Landscape Message image](assets/readme/landscape-message.png)
 
 - When a mobile device is turned to landscape mode, the site displays a full-screen prompt encouraging landscape mode for optimal viewing.
 
 ### Home Section
 
-![Home section image]
+![Home section image](assets/readme/home-section.png)
 
 * **Introduction**
 
@@ -118,17 +127,30 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 
 ### Interactive Map Section
 
+![Map section desktop image](assets/readme/map-desktop.png)
+![Map section mobile image](assets/readme/map-mobile.png)
+
 * **Colour Selector Buttons**
 
 - Users can select a colour to see which countries associate it with cultural meaning.
 
-* **Interactive Country Highlighting**
+- On mobile the colour selector buttons become coloured circles
 
-- Clicking a highlighted country reveals its cultural meaning for the chosen colour.
+- The map will then highlight with the selected colour on countries that have data relating to it. 
+
+![Map with Highlighted Colour](assets/readme/map-colour-highlighted.png)
+
+* **Interactive Country Hover**
+
+![Hover Module](assets/readme/map-hover-module.png)
+
+- Hovering over a highlighted country reveals the cultural meaning for the chosen colour.
 
 * **Information Module**
 
-- Displays the country’s name, meaning, cultural context, and a flag image.
+![Info Module](assets/readme/map-info-module.png)
+
+- Displays the country’s name, meaning and cultural context.
 
 - Includes a close button for quick dismissal.
 
@@ -136,17 +158,9 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 
 - The SVG map adjusts to any screen size without losing detail.
 
-### Information Section
-
-* **Cultural Context**
-
-* Hovering over a country provides a brief explanation of the meaning of the colour in each relevant country. 
-
-* Clicking on a country with a highlighted colour explains the historical and social meaning of colours in specific countries.
-
 ### 404 Error Page
 
-![Error Page image]
+![Error Page image] (assets/readme/404-page.png)
 
 * A dedicated error page is shown if the user enters an incorrect URL.
 
@@ -170,18 +184,6 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 
 * Add an option to compare colour meanings between two or more countries side-by-side.
 
-* **Interactive Timeline**
-
-* Integrate an interactive timeline showing how a colour’s meaning evolved in different countries over history.
-
-* **Audio Narration**
-
-* Include audio narration or short spoken facts for accessibility and engagement.
-
-* **Multi-Language Support**
-
-* Enable multi-language support so users can read the information in their preferred language.
-
 * **Educational Quiz**
 
 * Add an educational quiz or trivia game mode where users guess the meaning of a colour in a given country.
@@ -194,8 +196,8 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 * [Font Awesome](https://fontawesome.com/)
      - Font Awesome was used throughout all pages to add icons in order to create a better visual experience for UX purposes.
 
-* [Visual Studio Code](https://code.visualstudio.com/)
-    - VS Code was used for writing code, committing, and then pushing to GitHub.
+* [Visual Studio](https://code.visualstudio.com/)
+    - Visual Studio was used for writing code, committing, and then pushing to GitHub.
 
 * [GitHub](https://github.com/)
      - GitHub was used to store the project after pushing.
@@ -236,9 +238,11 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 * [Bootstrap] (https://getbootstrap.com/)
     - Boostrap CSS library was used for CSS styling. 
 
-### Testing 
+[Back to top ⇧](#world-of-colour)
 
-## Testing User Stories 
+## Testing 
+
+### Testing User Stories 
 
 * As a designer, I want to select a colour and see which countries have specific cultural associations with it, so that I can design with cultural awareness in mind.
     - Colour selection radio buttons are provided, allowing the user to select red, green, yellow, or blue.
@@ -252,9 +256,8 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
     - On mobile, tapping a country opens the info module with full details of the colour meaning and cultural context.
 
 * As a creative researcher, I want to compare how one colour is perceived differently around the world, so that I can draw creative insights and inspiration.
-    - Users can click on a country to open a detailed information module showing the cultural meaning, historical context, and optionally a flag or image.
+    - Users can click on a country to open a detailed information module showing the cultural meaning, historical context.
     - The information module is consistent in design, making it easy to compare data between multiple countries.
-    - Future enhancement: allow side-by-side comparison of colour meanings between multiple countries.
 
 * As a student, I want to quickly learn about colour perception in different regions.
     - Interactive map highlights relevant countries for a selected colour for immediate visual understanding.
@@ -270,10 +273,16 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
         1. I could change the version number to 1.1 or remove it all together. 
         2. I could create a javascript block to change the value "name" to "path-name" in the browser, which would then be accepted in the validator. 
     One final warning was that a heading was empty, which was because it was attached to a javascript function so this was unnecessary to change. 
+    ![HTML index Validator](assets/readme/validator-error-svgpathname.png)
+    
+     - There were no warnings on the 404 page.
+    ![HTML 404 Validator](assets/readme/validator-404clean.png)
 
     -  W3C CSS Validator found no errors or warnings on my CSS.
+    ![CSS Validator](assets/readme/css-validator-no-errors.png)
 
     - I used ES Lint (https://eslint.org/) to validate my javascript code by installing and initiating it directly on to my VSCode project. The validator found two warnings: 1. that a value was assigned to a const but never used - this was then deleted to remove the warning. 2. 'svgPanZoom' was not defined - to resolve this I added the comment /* global svgPanZoom */ which tells ESLint that svgPanZoom is a global variable. 
+    ![ES Lint](assets/readme/eslint-errors.png)
 
 ### Accessibility
 
@@ -283,11 +292,11 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 
     - **index.html**
 
-    ![Lighthouse report for landing page image]
+    ![Lighthouse report for landing page image](assets/readme/lighthouse-index.png)
 
     - **404.html**
 
-    ![Lighthouse report for 404 page image]
+    ![Lighthouse report for 404 page image](assets/readme/lighthouse-404.png)
 
 ### Tools Testing
 
@@ -366,11 +375,11 @@ Feature | Outcome | Pass/Fail
 Broken Link Handling | Invalid URLs show a 404 page with a working link back to the home page. | Pass
 Missing Data | If a country has no associated data, modal displays a friendly “No data available” message. | Pass
 
-## Automated testing 
+### Automated testing 
 
 For this project, I decided not to implement automated testing as I felt that manual testing was sufficient to verify the core functionality and ensure the site worked as expected across devices and screen sizes. All key features were tested manually using the test cases listed above.
 
-However, if I were to implement automated testing in the future, I would use Jest, a popular JavaScript testing framework, to write and run unit tests.
+However, if I were to implement automated testing in the future, I would use Jest (https://jestjs.io/), a popular JavaScript testing framework, to write and run unit tests.
 
 - Installing Jest on VS Code
 * Ensure Node.js is installed
@@ -413,10 +422,17 @@ However, if I were to implement automated testing in the future, I would use Jes
     ✓ returns correct colour for France (3 ms)
     ✓ returns 'unknown' for a country not in the list
 
+[Back to top ⇧](#world-of-colour)
+
 ## Finished Product
 
 Page / Section | Image
 --- | ---
+Home Page - Desktop | [Desktop version image1](assets/readme/home-final-desktop.png) [Desktop version image2](assets/readme/home-final-desktop2.png)
+Home Page - Mobile | [Mobile Version Image1](assets/readme/home-mobile.jpg) [Mobile Version Image2](assets/readme/home-mobile2.jpg)
+404 Error Page | ![404 error page image](assets/readme/404-page.png)
+
+[Back to top ⇧](#world-of-colour)
 
 ## Deployment
 
@@ -438,22 +454,38 @@ Page / Section | Image
 
     5. The page will refresh automatically and generate a link to your website.
 
+[Back to top ⇧](#world-of-colour)
+
 ## Credits
 
 ### Content
 
-(Instructions)
-(World of Colour content)
+[Instructions for Simple Maps SVG](https://simplemaps.com/docs/)
+
+[World of Colour content information sources](https://informationisbeautiful.net/visualizations/colours-in-cultures/)
 
 ### Media
 
-SVG image
-Logo symbol 
+[Free World SVG Map](https://simplemaps.com/resources/svg-world)
+
+[Logo symbol](https://www.adobe/uk/espress.com) 
 
 ### Code
 
 * [Stack Overflow](https://stackoverflow.com/), [CSS-Tricks](https://css-tricks.com/) and [W3Schools](https://www.w3schools.com/) were consulted on a regular basis for inspiration and sometimes to be able to better understand the code being implement.
 
+* [Free Code Camp](https://www.freecodecamp.org/news/how-to-make-clickable-svg-map-html-css/)
+
+[Back to top ⇧](#world-of-colour)
+
 ## Acknowledgements
 
+* My husband, for his unconditional love, help and continued support in all aspects of life to make it possible for me to complete this project.
 
+* My family, for their valuable opinions, critiques and support during the design and development process.
+
+* My tutor, Marcel, for his invaluable feedback and guidance.
+
+* Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
+
+[Back to top ⇧](#world-of-colour)
