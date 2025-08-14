@@ -299,9 +299,27 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 
     - Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
 
+### Manual Testing
 
-  
+* Browser Compatibility
 
+Browser | Outcome | Pass/Fail  
+--- | --- | ---
+Google Chrome | No appearance, responsiveness nor functionality issues.| Pass
+Safari | No appearance, responsiveness nor functionality issues. | Pass
+Mozilla Firefox | Scrollbar is visible even though it should be hidden. <br>No responsiveness nor functionality issues.| Pass
+Microsoft Edge | No appearance, responsiveness nor functionality issues. | Pass
+
+* Device compatibility
+
+Device | Outcome | Pass/Fail
+--- | --- | ---
+MacBook Pro 15" | No appearance, responsiveness nor functionality issues. | Pass
+Dell Latitude 5300 | No appearance, responsiveness nor functionality issues. | Pass
+iPad Pro 12.9" | No appearance, responsiveness nor functionality issues. | Pass
+iPad Pro 10.5" | No appearance, responsiveness nor functionality issues. | Pass
+iPhone XR | No appearance, responsiveness nor functionality issues. | Pass
+iPhone 7 | No appearance, responsiveness nor functionality issues. | Pass
     
 
 
