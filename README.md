@@ -17,10 +17,7 @@ Visit the deployed website [here] (https://terebts.github.io/world-of-colour/).
 2. [Features](#features)
     1. [General](#general)
     2. [Home Section](#home-section)
-    3. [Instructions Section](#instructions-section)
-    4. [Game section](#game-section)
-    5. [Result Section](#result-section)
-    6. [404 Error Page](#404-error-page)
+    3. [404 Error Page](#404-error-page)
 3. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
     2. [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
@@ -263,5 +260,48 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 
  ### Code Validation
 
+* The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) services were used to validate all pages of the project in order to ensure there were no syntax errors.
+
+    - W3C Markup Validator returned a series of warnings concerning several spare curly braces which I removed. The other warnings were concering the SVG that I uploaded into the project which stated "Unsupported SVG version specified. This validator only supports SVG 1.1. The recommended way to suppress this warning is to remove the version attribute altogether." and on each of the SVG paths: "Attribute name not allowed on element path at this point." I decided to leave the SVG as it was as it was not causing any issues in the functionality on the browser. If this needed to be corrected to pass a validator:
+        1. I could change the version number to 1.1 or remove it all together. 
+        2. I could create a javascript block to change the value "name" to "path-name" in the browser, which would then be accepted in the validator. 
+    One final warning was that a heading was empty, which was because it was attached to a javascript function so this was unnecessary to change. 
+
+    -  W3C CSS Validator found no errors or warnings on my CSS.
+
+    - I used ES Lint (https://eslint.org/) to validate my javascript code by installing and initiating it directly on to my VSCode project. The validator found two warnings: 1. that a value was assigned to a const but never used - this was then deleted to remove the warning. 2. 'svgPanZoom' was not defined - to resolve this I added the comment /* global svgPanZoom */ which tells ESLint that svgPanZoom is a global variable. 
+
+### Accessibility
+
+* Used Lighthouse in Chrome DevTools to confirm that the colors and fonts being used in throughout the website are easy to read and accessible.
+
+* Lighthouse reports
+
+    - **index.html**
+
+    ![Lighthouse report for landing page image]
+
+    - **404.html**
+
+    ![Lighthouse report for 404 page image]
+
+### Tools Testing
+
+* [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+
+    - Chrome DevTools was used during the development process to test, explore and modify HTML elements and CSS styles used in the project.
+
+* Responsiveness
+
+    - [Am I Responsive?](http://ami.responsivedesign.is/#) was used to check responsiveness of the site pages across different devices.
+
+    - [Responsive Design Checker](https://www.responsivedesignchecker.com/) was used to check responsiveness of the site pages on different screen sizes.
+
+    - Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
+
+
+  
+
+    
 
 

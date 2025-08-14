@@ -335,16 +335,27 @@ footer p {
 }
 
 /* Tablet styles */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 991px) {
     .main-title {
         font-size: 5rem;
-        text-align: left;
+        text-align: center;
     }
 
-    .min-vh-100 {
-        min-height: auto !important;
-        /* Remove the 100vh min-height on tablets */
+    h2 {
+        text-align: center;
     }
+    p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    #colour-select {
+        display: flex;
+        justify-content: center;
+    }
+    section {
+        padding: 0px 40px 0px 40px; 
+    }
+
 }
 
 
