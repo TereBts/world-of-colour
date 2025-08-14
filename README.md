@@ -342,44 +342,46 @@ iPhone 15 Pro | No appearance, responsiveness nor functionality issues. | Pass
 
 * Common Elements Testing
 
-- General
+    - General
 
- Feature | Outcome | Pass/Fail
-    --- | --- | ---
+Feature | Outcome | Pass/Fail
+--- | --- | ---
 Navigation Bar | All links scroll or navigate to the correct section and remain responsive at all screen sizes. | Pass
 Footer Links | All external links open in a new tab. | Pass
 Responsive Layout | Layout adapts correctly across desktop, tablet, and mobile screen sizes. | Pass
 Bootstrap Styling | Bootstrap classes are applied consistently for spacing, typography, and buttons. | Pass
 
-- Map Interaction
+    - Map Interaction
 
- Feature | Outcome | Pass/Fail
-    --- | --- | ---
+Feature | Outcome | Pass/Fail
+--- | --- | ---
 Pan & Zoom | User can pan and zoom in/out of the SVG map smoothly. | Pass
 Country Hover | Hovering over a country changes its appearance (highlight/fade effect) as expected. | Pass
 Hover Tooltip | Tooltip displays country name and colour meaning correctly. | Pass
 Country Click | Clicking on a country opens central modal with correct historical/context information. | Pass
 Modal Close Button | Closes modal and returns to map view as expected. | Pass
 
-- Colour Selection
+    - Colour Selection
 
- Feature | Outcome | Pass/Fail
-    --- | --- | ---
+Feature | Outcome | Pass/Fail
+--- | --- | ---
 Colour Picker | Selecting a colour applies it to the chosen countries correctly. | Pass
 Multiple Colours | Different countries can be assigned different colours without overwriting others. | Pass
 Reset Colours Button | Clears all colour selections and restores default map state. | Pass
 
 
-- Accessibility 
- Feature | Outcome | Pass/Fail
-    --- | --- | ---
+* Accessibility
+
+Feature | Outcome | Pass/Fail
+--- | --- | ---
 Keyboard Navigation | Tab key cycles through interactive elements in logical order. | Pass
 ARIA Labels | ARIA labels are present for key elements like buttons and map controls. | Pass
 High Contrast Mode | Content remains visible and usable in high-contrast display settings. | Pass
 
-- Error Handling
+* Error Handling
+
 Feature | Outcome | Pass/Fail
-    --- | --- | ---
+--- | --- | ---
 Broken Link Handling | Invalid URLs show a 404 page with a working link back to the home page. | Pass
 Missing Data | If a country has no associated data, modal displays a friendly “No data available” message. | Pass
 
