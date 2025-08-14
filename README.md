@@ -20,6 +20,7 @@ Visit the deployed website [here](https://terebts.github.io/world-of-colour/).
     1. [General](#general)
     2. [Home Section](#home-section)
     3. [404 Error Page](#404-error-page)
+    4. [Future Enhancements](#future-enhancements)
 3. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
     2. [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
@@ -187,6 +188,13 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 * **Educational Quiz**
 
 * Add an educational quiz or trivia game mode where users guess the meaning of a colour in a given country.
+
+## Technologies Used
+
+### Languages Used
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries and Programs Used
 
