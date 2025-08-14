@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>World of Colour</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Explore a world of colour at your fingertips with interactive features and engaging content.">
-    <link rel="icon" type="image/png" href="assets/images/worldofcolourlogo-colour.png">
+    <!--Favicon Link-->
+        <link rel="icon" type="image/png" href="assets/images/worldofcolourlogo-colour.png">
     <!-- Stylesheet link -->
         <link rel="stylesheet" href="css/style.css">
         <!-- Google fonts link -->
@@ -21,12 +21,12 @@
     <!-- Awesome Fonts link -->
     <script src="https://kit.fontawesome.com/46b24bab53.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
+<!--Landscape message for mobile users -->
     <div id="landscape-message">
         For the best experience, rotate your phone to landscape.
     </div>
-
+<!--Navigation Bar-->
     <nav class="navbar navbar-expand-lg" style="background-color: #f0f0f0; width: 100%;">
         <div class="container-fluid nav-container">
             <!-- Mobile logo centered -->
@@ -39,7 +39,7 @@
             </a>
         </div>
     </nav>
-
+<!-- Main content -->
     <div class="container-fluid p-0">
         <div class="row min-vh-100 g-0">
 
@@ -70,18 +70,19 @@
 
                     <!-- Colour Picker -->
                     <div id="colour-select" class="mb-5 mt-5 d-flex gap-2 flex-wrap justify-content-center">
+                        <!--Red-->
                         <input type="radio" class="btn-check btn-colour" name="colour" id="red" 
                         value="red">
                         <label class="btn btn-outline-danger" for="red">Red</label>
-
+                        <!--Green-->
                         <input type="radio" class="btn-check btn-colour" name="colour" id="green" 
                             value="green">
                         <label class="btn btn-outline-success" for="green">Green</label>
-
+                        <!--Yellow-->
                         <input type="radio" class="btn-check btn-colour" name="colour" id="yellow" 
                             value="yellow">
                         <label class="btn btn-outline-warning" for="yellow">Yellow</label>
-
+                        <!--Blue-->
                         <input type="radio" class="btn-check btn-colour" name="colour" id="blue"
                             value="blue">
                         <label class="btn btn-outline-primary" for="blue">Blue</label>
@@ -1651,7 +1652,6 @@
         </div>
     </div>
 
-
     <!-- Hidden Modals for country information -->
     <!-- Hover modal -->
     <div id="hover-info" class="hover-hidden">
@@ -1689,6 +1689,7 @@
                     </a>
                 </div>
             </div>
+            <!--Copyright Text-->
             <div class="col-12 d-flex justify-content-center mt-4">
                 <p class="text-center">© 2024 World Map Project. All rights reserved.</p>
         </div>
@@ -1704,5 +1705,4 @@
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
-
 </html>

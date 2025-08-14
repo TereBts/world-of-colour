@@ -350,3 +350,4 @@ document.addEventListener('DOMContentLoaded', checkOrientation);
 document.getElementById("close-info").addEventListener("click", function () {
   document.getElementById("info-module").classList.add("info-hidden");
 });
+
