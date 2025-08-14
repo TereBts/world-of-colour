@@ -228,22 +228,22 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
     - W3C CSS Validator was used to validate the CSS code.
 
-* [ESLint] (https://eslint.org/)
+* [ESLint](https://eslint.org/)
     - ES Lint was installed on my VSCode project to check for errors  and validate the site's JavaScript code.
 
-* [AdobeExpress] (https://www.adobe.com/uk/express/)
+* [AdobeExpress](https://www.adobe.com/uk/express/)
     - Adobe Express was used to source the icon used for the site's logo.
 
-* [Procreate] (https://procreate.com/)
+* [Procreate](https://procreate.com/)
     - Procreate was used to finalise the colour version of the logo. 
 
-* [SimpleMaps] (https://simplemaps.com/resources/svg-world)
+* [SimpleMaps](https://simplemaps.com/resources/svg-world)
     - Simple Maps was used to source the website's world map SVG. 
 
-* [SVGPanZoom-API] (https://simplemaps.com/resources/svg-world)
+* [SVGPanZoom-API](https://simplemaps.com/resources/svg-world)
     - SVG Pan Zoom API was used to facilitate the zooming and panning of the world map SVG. 
 
-* [Bootstrap] (https://getbootstrap.com/)
+* [Bootstrap](https://getbootstrap.com/)
     - Boostrap CSS library was used for CSS styling. 
 
 [Back to top ⇧](#world-of-colour)
