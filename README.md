@@ -154,6 +154,10 @@ The main font used in the site is DM Serif with Sans Serif as the fallback font 
 
 ### Future Enhancements 
 
+* **More Content**
+
+* Add more colours and data about more countries.
+
 * **Multimedia Illustrations**
 
 * Enrich country information with relevant images or embedded video links to illustrate cultural colour meanings in an engaging way.
@@ -317,9 +321,139 @@ Device | Outcome | Pass/Fail
 MacBook Pro 15" | No appearance, responsiveness nor functionality issues. | Pass
 Dell Latitude 5300 | No appearance, responsiveness nor functionality issues. | Pass
 iPad Pro 12.9" | No appearance, responsiveness nor functionality issues. | Pass
-iPad Pro 10.5" | No appearance, responsiveness nor functionality issues. | Pass
-iPhone XR | No appearance, responsiveness nor functionality issues. | Pass
-iPhone 7 | No appearance, responsiveness nor functionality issues. | Pass
-    
+iPhone 15 Pro | No appearance, responsiveness nor functionality issues. | Pass
+
+* Common Elements Testing
+
+- General
+
+ Feature | Outcome | Pass/Fail
+    --- | --- | ---
+Navigation Bar | All links scroll or navigate to the correct section and remain responsive at all screen sizes. | Pass
+Footer Links | All external links open in a new tab. | Pass
+Responsive Layout | Layout adapts correctly across desktop, tablet, and mobile screen sizes. | Pass
+Bootstrap Styling | Bootstrap classes are applied consistently for spacing, typography, and buttons. | Pass
+
+- Map Interaction
+
+ Feature | Outcome | Pass/Fail
+    --- | --- | ---
+Pan & Zoom | User can pan and zoom in/out of the SVG map smoothly. | Pass
+Country Hover | Hovering over a country changes its appearance (highlight/fade effect) as expected. | Pass
+Hover Tooltip | Tooltip displays country name and colour meaning correctly. | Pass
+Country Click | Clicking on a country opens central modal with correct historical/context information. | Pass
+Modal Close Button | Closes modal and returns to map view as expected. | Pass
+
+- Colour Selection
+
+ Feature | Outcome | Pass/Fail
+    --- | --- | ---
+Colour Picker | Selecting a colour applies it to the chosen countries correctly. | Pass
+Multiple Colours | Different countries can be assigned different colours without overwriting others. | Pass
+Reset Colours Button | Clears all colour selections and restores default map state. | Pass
+
+
+- Accessibility 
+ Feature | Outcome | Pass/Fail
+    --- | --- | ---
+Keyboard Navigation | Tab key cycles through interactive elements in logical order. | Pass
+ARIA Labels | ARIA labels are present for key elements like buttons and map controls. | Pass
+High Contrast Mode | Content remains visible and usable in high-contrast display settings. | Pass
+
+- Error Handling
+Feature | Outcome | Pass/Fail
+    --- | --- | ---
+Broken Link Handling | Invalid URLs show a 404 page with a working link back to the home page. | Pass
+Missing Data | If a country has no associated data, modal displays a friendly “No data available” message. | Pass
+
+## Automated testing 
+
+For this project, I decided not to implement automated testing as I felt that manual testing was sufficient to verify the core functionality and ensure the site worked as expected across devices and screen sizes. All key features were tested manually using the test cases listed above.
+
+However, if I were to implement automated testing in the future, I would use Jest, a popular JavaScript testing framework, to write and run unit tests.
+
+- Installing Jest on VS Code
+* Ensure Node.js is installed
+    Jest runs on Node.js, so make sure it is installed by running:
+    - "node -v"
+    - "npm -v"
+    - If not installed, download and install it from nodejs.org.
+
+* Install Jest
+    Inside the project folder, run:
+    - npm init -y
+    - npm install --save-dev jest
+    - Configure package.json
+
+* In the package.json file, add a test script:
+    "scripts": {
+    "test": "jest"
+    }
+
+* Create a test file
+    - Jest looks for files ending in .test.js or .spec.js.
+    Example:
+    // helpers.test.js
+    const getCountryColour = require("./helpers");
+
+    test("returns correct colour for France", () => {
+    expect(getCountryColour("France")).toBe("blue");
+    });
+
+    test("returns 'unknown' for a country not in the list", () => {
+    expect(getCountryColour("Atlantis")).toBe("unknown");   
+    });
+
+* If run:
+    "npm test"
+
+*Jest would output something like:
+
+    PASS  ./helpers.test.js
+    ✓ returns correct colour for France (3 ms)
+    ✓ returns 'unknown' for a country not in the list
+
+## Finished Product
+
+Page / Section | Image
+--- | ---
+
+## Deployment
+
+* This website was developed using [Visual Studio](https://visualstudio.microsoft.com/), which was then committed and pushed to GitHub using the VS terminal.
+
+### GitHub Pages
+
+* Here are the steps to deploy this website to GitHub Pages from its GitHub repository:
+
+    1. Log in to GitHub and locate the [GitHub Repository](https://github.com/).
+
+    2. At the top of the Repository, locate the Settings button on the menu.
+
+        - Alternatively click [here](https://raw.githubusercontent.com/) for a GIF demostration of the process.
+
+    3. Scroll down the Settings page until you locate the Pages section.
+
+    4. Under Source, click the dropdown called None and select Master Branch.
+
+    5. The page will refresh automatically and generate a link to your website.
+
+## Credits
+
+### Content
+
+(Instructions)
+(World of Colour content)
+
+### Media
+
+SVG image
+Logo symbol 
+
+### Code
+
+* [Stack Overflow](https://stackoverflow.com/), [CSS-Tricks](https://css-tricks.com/) and [W3Schools](https://www.w3schools.com/) were consulted on a regular basis for inspiration and sometimes to be able to better understand the code being implement.
+
+## Acknowledgements
 
 
