@@ -150,20 +150,22 @@ const countryData = {
     }
   ]
 };
-// Helper: Get country info by SVG ID
+// Helper: Get country info by SVG ID and selected colour
 function getCountryInfoById(id) {
-  for (const colour in countryData) {
-    for (const country of countryData[colour]) {
-      if (country.ids.includes(id)) {
-        return {
-          name: country.country,
-          meaning: country.meaning,
-          history: country.context
-        };
-      }
+  if (!selectedColour || !countryData[selectedColour]) return null;
+
+  // Only look at the countries for the currently selected colour
+  const countriesForColour = countryData[selectedColour];
+  for (const country of countriesForColour) {
+    if (country.ids.includes(id)) {
+      return {
+        name: country.country,
+        meaning: country.meaning,
+        history: country.context
+      };
     }
   }
-  return null; // Return null if no country found
+  return null; // No match for this colour
 }
 
 // Add country class to SVG elements
